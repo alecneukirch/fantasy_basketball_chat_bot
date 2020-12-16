@@ -432,8 +432,8 @@ if __name__ == '__main__':
         day_of_week='mon', hour=18, minute=30, start_date=ff_start_date, end_date=ff_end_date,
         timezone=my_timezone, replace_existing=True)
     sched.add_job(bot_main, 'cron', ['get_matchups'], id='matchups',
-        day_of_week='sun', hour=19, minute=30, start_date=ff_start_date, end_date=ff_end_date,
-        timezone=game_timezone, replace_existing=True)
+        day_of_week='tue', hour=19, minute=45, start_date=ff_start_date, end_date=ff_end_date,
+        timezone='America/Chicago', replace_existing=True)
     sched.add_job(bot_main, 'cron', ['get_close_scores'], id='close_scores',
         day_of_week='sun', hour=18, minute=30, start_date=ff_start_date, end_date=ff_end_date,
         timezone=game_timezone, replace_existing=True)
@@ -444,7 +444,7 @@ if __name__ == '__main__':
         day_of_week='mon', hour=7, minute=30, start_date=ff_start_date, end_date=ff_end_date,
         timezone=my_timezone, replace_existing=True)
     sched.add_job(bot_main, 'cron', ['get_scoreboard_short'], id='scoreboard1',
-        day_of_week='tue,wed,thu,fri,sat,sun', hour=19, minute=30, start_date=ff_start_date, end_date=ff_end_date,
+        day_of_week='tue,wed,thu,fri,sat,sun', hour=7, minute=30, start_date=ff_start_date, end_date=ff_end_date,
         timezone=my_timezone, replace_existing=True)
     sched.add_job(bot_main, 'cron', ['get_scoreboard_short'], id='scoreboard2',
         day_of_week='sat', hour='22', start_date=ff_start_date, end_date=ff_end_date,
